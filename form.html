@@ -3,7 +3,6 @@
 <head>
   <title>HTML FORM EXERCISE</title>
   <style>
-    body {}
     .center {
       margin: auto;
       width: 60%;
@@ -15,16 +14,7 @@
       margin-top: 25px; 
       margin-left: 10px
     }
-     .form-group3 {
-      margin-top: 25px; 
-      margin-left: 10px;
-      padding-bottom: 30px;
-    }
     label {
-      /*font-family: Georgia, "Times New Roman", Times, serif;
-      font-size: 18px;
-      color: #333;
-      height: 20px;*/
       width: 150px;
       margin-top: 10px;
       margin-left: 10px;
@@ -32,12 +22,7 @@
       margin-right:15px;
       float:left;
     }
-    input {
-      /*height: 20px;
-      border: 1px solid #000;
-      width: 300px;      */
-      margin-top: 10px;
-    } 
+    input {margin-top: 10px;} 
     p {
       margin-top: 10px; 
       margin-left: 10px
@@ -57,11 +42,11 @@
         <br>
         <div class="form-group"> <!--for grouping label and input -->
             <label for="name1">Your name<sup>*</sup>:</label> <!--label for text Your name -->
-            <input type="text" name="name1" value="" required/> <!--require validates input value -->
+            <input type="text" name="name" value="" required/> <!--require validates input value -->
         </div>
         <div class="form-group">
             <label for="email1">E-mail<sup>*</sup>:</label>
-            <input type="text" name="email1" value="" required/>
+            <input type="text" name="email" value="" required/>
         </div>  
         <div class="form-group">
             <label for="phone">Phone number:</label>
@@ -86,7 +71,7 @@
 
       <div class="form-group2">
         <strong>Password Field</strong><br>
-        Password: <input type="password" name="password_name" value="">
+        Password: <input type="password" name="password" value="">
       </div>
 
       <div class="form-group2">
@@ -100,7 +85,7 @@
 
       <div class="form-group2">
         <strong>Check Box</strong><br>
-        <input type="checkbox" name="check_box_name" value=""> Check this box if you like our service
+        <input type="checkbox" name="checkbox" value=""> Check this box if you like our service
       </div>
 
       <div class="form-group2">
@@ -133,10 +118,10 @@
 
       <div class="form-group2">
         <strong>Attach file</strong><br>
-        <input type="file" name="file_name">
+        <input type="file" name="file">
       </div>
 
-      <div class="form-group3">
+      <div class="form-group2">
         <strong>Buttons</strong><br>
         <input type="submit" value="Submit"> <input type="reset" value="Reset">
       </div>
