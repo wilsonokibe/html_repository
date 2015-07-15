@@ -3,30 +3,32 @@
 <head>
   <title>HTML FORM EXERCISE</title>
   <style>
+    .cont {margin-left: 10px;}
     .center {
       margin: auto;
       width: 60%;
       padding: 10px;
       background-color:#D3D3D3;
-    }
-    .form-group {}
+    } 
     .form-group2 {
-      margin-top: 25px; 
-      margin-left: 10px
+      margin-top: 10px;
     }
     label {
-      width: 150px;
-      margin-top: 10px;
-      margin-left: 10px;
+      width: 120px;
+      margin-top: 0px;
+      margin-left: 0px;
       text-align: left;
-      margin-right:15px;
       float:left;
+      clear: both;
     }
-    input {margin-top: 10px;} 
+    input {margin-top: 0px;}    
     p {
       margin-top: 10px; 
-      margin-left: 10px
-    }  
+      margin-left: 0px;
+    } 
+    .formfield * {
+      vertical-align: middle;
+    } 
   </style>
   <!--
   HTML EXERCISE 
@@ -34,96 +36,90 @@
   -->
 </head>
 <body>
-  <form action="" method="GET" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" autocomplete="on" >
-
+  <form action="" method="POST" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" autocomplete="on" >
     <div class="center">
-      <p>
-        <strong style="margin-left:30px">Contact form</strong>
-        <br>
-        <div class="form-group"> <!--for grouping label and input -->
+      <div class="cont">
+        <p>
+          <strong style="margin-left:30px">Contact form</strong>
+          <br>
+          <div class="form-group2"> <!--for grouping label and input -->
             <label for="name1">Your name<sup>*</sup>:</label> <!--label for text Your name -->
-            <input type="text" name="name" value="" required/> <!--require validates input value -->
-        </div>
-        <div class="form-group">
+            <input type="text" name="name" id="name1" required/> <!--require validates input value -->
+          </div>
+          <div class="form-group2">
             <label for="email1">E-mail<sup>*</sup>:</label>
-            <input type="text" name="email" value="" required/>
-        </div>  
-        <div class="form-group">
-            <label for="phone">Phone number:</label>
-            <input type="text" name="phone" value=""/>
-        </div> 
-        <div class="form-group">
-            <label for="website">Website<sup>*</sup>:</label>
-            <input type="text" name="website" value="http://" size="30px" required/>
-        </div> 
-      </p>
-
-      <div class="form-group2">
-        Comments<sup>*</sup>: <br>
-        <textarea name="message" rows="10" cols="40"  required></textarea>   
-      </div>
-
-      <div class="form-group2">
-        <strong>Text Field</strong>
+             <input type="text" id="email1" name="email" required/>
+          </div>  
+          <div class="form-group2">
+            <label for="phone1">Phone number:</label>
+            <input type="text" name="phone" id="phone1"/>
+          </div> 
+          <div class="form-group2">
+            <label for="website1">Website<sup>*</sup>:</label>
+            <input type="text" name="website" id ="website1" value="http://" size="30px" required/>
+          </div> 
+        </p>
+        <div class="formfield">
+          <label for="comm">Comments<sup>*</sup>: </label><br>
+          <textarea name="message" id="comm" rows="10" cols="40"  required></textarea> 
+        </div>       
+        <div class="form-group2">
+          <strong>Text Field</strong>
+          <br>
+          <label for ="textfield"> Your name: </label>
+          <input type="text" name="text" id="textfield"/>
+        </div>
+        <div class="form-group2">
+          <strong>Password Field</strong><br>
+          <label for="pass">Password: </label>
+          <input type="password" name="password" id="pass">
+        </div>
+        <div class="form-group2">
+          <strong>Radio Buttons</strong><br>
+          Do you like pizza?</label><br>
+          <input type="radio" name="pizza"  value="yes">Yes<br>
+          <input type="radio" name="pizza" value="no">No<br>
+          <input type="radio" name="pizza" value="maybe">Maybe<br>
+          <input type="radio" name="pizza" value="never">Never tried
+        </div>
+        <div class="form-group2">
+          <strong>Check Box</strong><br>
+          <input type="checkbox" name="checkbox"> Check this box if you like our service
+        </div>
         <br>
-        Your name: <input type="text" name="yourname_name" value="">
-      </div>
-
-      <div class="form-group2">
-        <strong>Password Field</strong><br>
-        Password: <input type="password" name="password" value="">
-      </div>
-
-      <div class="form-group2">
-        <strong>Radio Buttons</strong><br>
-        Do you like pizza?<br>
-        <input type="radio" name="pizza" value="yes">Yes<br>
-        <input type="radio" name="pizza" value="no">No<br>
-        <input type="radio" name="pizza" value="maybe">Maybe<br>
-        <input type="radio" name="pizza" value="never">Never tried
-      </div>
-
-      <div class="form-group2">
-        <strong>Check Box</strong><br>
-        <input type="checkbox" name="checkbox" value=""> Check this box if you like our service
-      </div>
-
-      <div class="form-group2">
-        <strong>Text Area</strong><br>
-        Anything you would like to say?<br>
-        <textarea name="message" rows="8" cols="50"></textarea>
-      </div>
-
-      <div class="form-group2">
-        <strong>I Like</strong><br><br>
-        <select name="vegetables" multiple size="5">
-          <option value="Mushroom">Mushrooms</option>
-          <option value="greenpeppers">Green Peppers</option>
-          <option value="onions">Onions</option>
-          <option value="tomatoes">Tomatoes</option>
-          <option value="olives">Olives</option>
-        </select>
-      </div>
-
-      <div class="form-group2">
-        <strong>Menu</strong><br>
-        Your favourite color:<br>
-        <select name="colors">
-          <option value="red">red</option>
-          <option value="green">green</option>
-          <option value="yellow">yellow</option>
-          <option value="blue">blue</option>
-        </select>
-      </div>
-
-      <div class="form-group2">
-        <strong>Attach file</strong><br>
-        <input type="file" name="file">
-      </div>
-
-      <div class="form-group2">
-        <strong>Buttons</strong><br>
-        <input type="submit" value="Submit"> <input type="reset" value="Reset">
+        <div class="formfield">
+          <strong>Text Area</strong><br>
+          <label for="txtarea" style="width:300px">Anything you would like to say?</label><br>
+          <textarea name="message" id="txtarea" rows="8" cols="50"></textarea>
+        </div>
+        <div class="form-group2">
+          <strong>I Like</strong><br><br>
+          <select name="vegetables" multiple size="5">
+            <option value="Mushroom">Mushrooms</option>
+            <option value="greenpeppers">Green Peppers</option>
+            <option value="onions">Onions</option>
+            <option value="tomatoes">Tomatoes</option>
+            <option value="olives">Olives</option>
+          </select>
+        </div>
+        <div class="form-group2">
+          <strong>Menu</strong><br>
+          Your favourite color:<br>
+          <select name="colors">
+            <option value="red">red</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="blue">blue</option>
+          </select>
+        </div>
+        <div class="form-group2">
+          <strong>Attach file</strong><br>
+          <input type="file" name="file">
+        </div>
+        <div class="form-group2">
+          <strong>Buttons</strong><br>
+          <input type="submit" value="Submit"> <input type="reset" value="Reset">
+        </div>
       </div>
     </div>
   </form>
